@@ -17,7 +17,7 @@ appium_log_file = (Pathname.new ac_output_path).join("appium.log")
 appium_version = ''
 appium_version = "@#{cli_version}" if !cli_version.nil? && !cli_version.empty?
 
-install_appium = "npm install -g appium#{appium_version} --unsafe-perm=true --allow-root"
+install_appium = "sudo npm install -g appium#{appium_version} --unsafe-perm=true --allow-root"
 run_appium = "appium --log #{appium_log_file} &>/dev/null &"
 run_command(install_appium)
 run_command(run_appium)
